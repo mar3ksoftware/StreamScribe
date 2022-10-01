@@ -1,4 +1,5 @@
 ﻿using StreamScribe.Pointer.Generic;
+using StreamScribe.Stream.Exceptions;
 
 using System.Collections;
 using System.Runtime.InteropServices;
@@ -23,9 +24,9 @@ internal abstract class StreamContext : IStreamContext
         Dispose(disposing: false);
     }
 
-    protected IList<byte> Context => _context == null ? throw new NullReferenceException() : _context!;
-    protected IInteractivePointer Pointer => _pointer == null ? throw new NullReferenceException() : _pointer!;
-    public byte this[int index] => _context == null ? throw new NullReferenceException() : _context[index];
+    protected IList<byte> Context => _context == null ? throw new ContextNullException() : _context!;
+    protected IInteractivePointer Pointer => _pointer == null ? throw new PointerNullException() : _pointer!;
+    public byte this[int index] => _context == null ? throw new ContextNullException() : _context[index];
 
     public abstract object Clone();
 
