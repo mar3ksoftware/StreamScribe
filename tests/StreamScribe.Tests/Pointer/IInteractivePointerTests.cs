@@ -98,11 +98,10 @@ public sealed class IInteractivePointerTests
 
     [Theory]
     [ScribeAutoData]
-    public void SetStopBoundary_Exception_Test(IInteractivePointer pointer, Random rng)
+    public void SetStopBoundary_Exception_Test(IInteractivePointer pointer)
     {
-        var stop = rng.Next(pointer.Stop - rng.Next(pointer.Stop - 20));
         pointer.SetPosition(pointer.Stop);
-        Assert.Throws<PointerOverflowException>(() => pointer.SetStopBoundary(stop));
+        Assert.Throws<PointerOverflowException>(() => pointer.SetStopBoundary(pointer.Stop - 1));
     }
 
     [Theory]

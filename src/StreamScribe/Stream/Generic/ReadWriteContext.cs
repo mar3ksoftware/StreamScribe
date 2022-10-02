@@ -278,15 +278,6 @@ internal abstract class ReadWriteContext : ReadContext, IWriteContext
 
     private void InsertSByte(sbyte value)
     {
-        if (Pointer.Current + 1 > Pointer.Stop)
-        {
-            Context.Add((byte)value);
-            Pointer.SetStopBoundary(Pointer.Stop + 1);
-        }
-        else
-        {
-            Context[Pointer.Current] = (byte)value;
-        }
-        Pointer.Advance();
+        InsertByte((byte)value);
     }
 }
