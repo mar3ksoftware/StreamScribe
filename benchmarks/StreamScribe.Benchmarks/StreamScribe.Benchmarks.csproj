@@ -15,8 +15,4 @@
     <ProjectReference Include="..\..\src\StreamScribe\StreamScribe.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Stream\" />
-  </ItemGroup>
-
 </Project>
