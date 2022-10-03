@@ -1,5 +1,12 @@
 ## StreamScribe - Mutable and Immutable binary stream operations.
 
+#### Installation:
+
+To install the package run this code in .net cli or use NuGet package manager and type `StreamScribe`
+```
+dotnet add package StreamScribe --version 1.0.0
+```
+
 #### Contents:
 * `IImmutableStream` - Stream with predefined `context`, usually it's used for read-only operations.
 * `IMutableStream` - Stream without predefined `context`, used for read and write operations.
