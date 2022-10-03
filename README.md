@@ -30,7 +30,7 @@ Same goes for `IImmutableStream`:
 ```csharp
 using (var stream = StreamBuilder.GetInstance().BuildImmutableStream())
 {
-   var foo = stream.ReadUInt8(0xFF);
+   var foo = stream.ReadUInt8();
 }
 ```
 
@@ -40,7 +40,7 @@ With one exception, since `IImmutableStream` needs some kind of context to be pr
 IEnumerable<byte> context = new byte[1024];
 using (var stream = StreamBuilder.GetInstance().WithContext(context).BuildImmutableStream())
 {
-    var foo = stream.ReadUInt8(0xFF);
+    var foo = stream.ReadUInt8();
 }
 ```
 
