@@ -4,6 +4,29 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>A lightweight library which main goal is to simplify the process of reading and writing binary data.</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/mar3ksoftware/StreamScribe</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>stream, streams, binary</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>@https://github.com/mar3ksoftware</Copyright>
+    <Title>StreamScribe</Title>
+    <Authors>Marcin Janczak</Authors>
+    <Company>https://github.com/mar3ksoftware</Company>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
